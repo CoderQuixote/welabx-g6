@@ -307,7 +307,7 @@ export default {
       });
 
       this.graph = new G6.Graph(cfg);
-      this.graph.read(data); // 读取数据
+      this.graph.read({}); // 读取数据
       // this.graph.paint(); // 渲染到页面
       // this.graph.get('canvas').set('localRefresh', false); // 关闭局部渲染
       // this.graph.fitView();
