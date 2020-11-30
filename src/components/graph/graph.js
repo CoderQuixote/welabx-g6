@@ -37,6 +37,16 @@ export default (G6, config) => {
             enableDelegate: true,
         }, */
         // 'activate-relations',
+         {
+            type: 'brush-select',
+            brushStyle: {
+              fill: 'red',
+              fillOpacity: 0.1
+            },
+            onSelect(nodes){
+              console.log('onSelect', nodes);
+            }
+        },
         'canvas-event', // 自定义行为
         'delete-item',
         'select-node',
