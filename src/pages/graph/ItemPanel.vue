@@ -36,6 +36,12 @@
         data-shape="modelRect-node"
         class="iconfont icon-model-rect"
       />
+      <i
+        draggable="true"
+        data-type="node"
+        data-shape="image-node"
+        class="iconfont"
+      >图</i>
       <i class="split" />
       <i
         draggable="true"
