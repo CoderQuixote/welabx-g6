@@ -124,7 +124,7 @@ export default G6 => {
         y: 0,
       }, cfg);
     },
-  },
+  }, 'base-node');
   
   // 扩展菱形
   G6.registerNode('diamond-node', {
