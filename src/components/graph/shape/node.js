@@ -5,7 +5,8 @@
  * @param {string} labelCfg 文本节点样式
  */
 import defaultStyles from './defaultStyles';
-
+let img= new Image();
+img.src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png"
 const {
   iconStyles,
   nodeStyles,
@@ -109,6 +110,22 @@ export default G6 => {
     },
   }, 'base-node');
 
+    // 扩展图片节点
+  G6.registerNode('image-node', {
+    shapeType: 'image',
+    getShapeStyle(cfg) {
+
+      return getStyle.call(this, {
+        img: img, // 半径
+        width: 100,
+        height: 100,
+        // 将图形中心坐标移动到图形中心, 用于方便鼠标位置计算
+        x: 0,
+        y: 0,
+      }, cfg);
+    },
+  },
+  
   // 扩展菱形
   G6.registerNode('diamond-node', {
     shapeType: 'path', // 非内置 shape 要指定为path
